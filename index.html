@@ -27,6 +27,7 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      
     </header>
 
     <div class="container">
@@ -34,18 +35,18 @@
           <div class = "col-md">
               <div class = "row" id = "hour1">
                   <div class = "col-md-1 hour"></div>
-                  <div class = "col-md-10"></div>
-                  <div class = "col-md-1 saveBtn"></div>
+                  <input class = "col-md-10" id="message" type="text" required>
+                  <div class = "col-md-1 btn btn-primary input-group-text saveBtn"></div>
               </div>
               <div class = "row" id = "hour2">
                     <div class = "col-md-1 hour"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1 saveBtn"></div>
+                    <input class = "col-md-10" id="message" type="text" required>
+                    <div class = "col-md-1 btn btn-primary saveBtn"></div>
               </div>
               <div class = "row" id = "hour3">
                     <div class = "col-md-1 hour"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1 saveBtn"></div>
+                    <input class = "col-md-10" id="message" type="text" required>
+                    <div class = "col-md-1 btn btn-primary saveBtn"></div>
               </div>
               <!-- <div class = "row" id = "hour4">
                     <div class = "col-md-1"></div>
@@ -74,8 +75,14 @@
               </div> -->
           </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script id = "date">
+        var m = moment();
+        console.log(m.format('LL'));
+        // var currentDay = document.getElementById("currentDay");
+        // currentDay.textContent(m);
+        $("#currentDay").append(m.format('LL'));
+      </script>
   </body>
 </html>
