@@ -26,8 +26,7 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      
+      <p id="currentDay" class="lead time-block"></p>
     </header>
 
     <div class="container">
@@ -35,19 +34,21 @@
           <div class = "col-md">
               <div class = "row" id = "hour1">
                   <div class = "col-md-1 hour"></div>
-                  <input class = "col-md-10" id="message" type="text" required>
-                  <div class = "col-md-1 btn btn-primary input-group-text saveBtn"></div>
-              </div>
+                  <input class = "col-md-10 description" id="input1" type="text">
+                  <button type = "button" class = "btn btn-primary col-md-1" id="saveBtn">Search</button>
+                </div>
+
               <div class = "row" id = "hour2">
                     <div class = "col-md-1 hour"></div>
+                    <input class = "col-md-10" id="input2" type="text" required>
+                    <button type = "button" class = "btn btn-primary col-md-1" id="saveBtn">Search</button>
+                  </div>
+
+              <!-- <div class = "row" id = "hour3">
+                    <div class = "col-md-1 hour">10:00</div>
                     <input class = "col-md-10" id="message" type="text" required>
-                    <div class = "col-md-1 btn btn-primary saveBtn"></div>
-              </div>
-              <div class = "row" id = "hour3">
-                    <div class = "col-md-1 hour"></div>
-                    <input class = "col-md-10" id="message" type="text" required>
-                    <div class = "col-md-1 btn btn-primary saveBtn"></div>
-              </div>
+                    <button type = "button" class = "col-md-1 btn btn-primary saveBtn"></button>
+              </div>  -->
               <!-- <div class = "row" id = "hour4">
                     <div class = "col-md-1"></div>
                     <div class = "col-md-10"></div>
@@ -84,5 +85,6 @@
         // currentDay.textContent(m);
         $("#currentDay").append(m.format('LL'));
       </script>
+    <script src ="./script.js"></script>
   </body>
 </html>
