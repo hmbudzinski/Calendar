@@ -35,10 +35,6 @@ textarea{
     height: 80px;
     border: 1px solid black;;
   }
-
-  .col-md-1, .col-md-10{
-    border: 1px solid purple;
-  }
   
   .hour {
     background-color: #ffffff;

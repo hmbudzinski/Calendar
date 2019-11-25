@@ -33,16 +33,18 @@
       <!-- Timeblocks go here -->
           <div class = "col-md">
               <div class = "row" id = "hour1">
-                  <div class = "col-md-1 hour"></div>
-                  <input class = "col-md-10 description" id="input1" type="text">
-                  <button type = "button" class = "btn btn-primary col-md-1" id="saveBtn">Search</button>
+                  <div class = "col-md-1 hour firsthour"></div>
+                  <textarea id="myText1" class = "col-md-10" type="text"></textarea>
+                  <!-- <input class = "col-md-10 description" id="input1" type="text"> -->
+                  <button type = "submit" class = "btn col-md-1 saveBtn" id="saveBtn1">Save</button>
                 </div>
 
               <div class = "row" id = "hour2">
-                    <div class = "col-md-1 hour"></div>
-                    <input class = "col-md-10" id="input2" type="text" required>
-                    <button type = "button" class = "btn btn-primary col-md-1" id="saveBtn">Search</button>
-                  </div>
+                  <div class = "col-md-1 hour"></div>
+                  <textarea id="myText2" class = "col-md-10" type="text"></textarea>
+                  <!-- <input class = "col-md-10" id="input2" type="text" required> -->
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn2">Save</button>
+              </div>
 
               <!-- <div class = "row" id = "hour3">
                     <div class = "col-md-1 hour">10:00</div>
@@ -81,9 +83,12 @@
     <script id = "date">
         var m = moment();
         console.log(m.format('LL'));
-        // var currentDay = document.getElementById("currentDay");
-        // currentDay.textContent(m);
         $("#currentDay").append(m.format('LL'));
+        // $("#hour1").append(m.format('h'));
+        // var m1 = moment();
+        // $("#firsthour").append(m1.fromNow('h'));
+        // console.log(m1.fromNow('h'));
+
       </script>
     <script src ="./script.js"></script>
   </body>
