@@ -1,31 +1,178 @@
-// var userInput = '';//whatever the user types in
 var currentDay = $("#currentDay");
+
 var text1 = document.getElementById("myText1");
 var text2 = document.getElementById("myText2");
+var text3 = document.getElementById("myText3");
+var text4 = document.getElementById("myText4");
+var text5 = document.getElementById("myText5");
+var text6 = document.getElementById("myText6");
+var text7 = document.getElementById("myText7");
+var text8 = document.getElementById("myText8");
+var text9 = document.getElementById("myText9");
+var text10 = document.getElementById("myText10");
+
+var local1 = "";
+var local2 = "";
+var local3 = "";
+var local4 = "";
+var local5 = "";
+var local6 = "";
+var local7 = "";
+var local8 = "";
+var local9 = "";
+var local10 = "";
+
+var firsthour = document.getElementById("firsthour");
+(firsthour).textContent = "8:00AM";
+
+var secondhour = document.getElementById("secondhour");
+(secondhour).textContent = "9:00AM";
+
+var thirdhour = document.getElementById("thirdhour");
+(thirdhour).textContent = "10:00AM ";
+
+var fourthhour = document.getElementById("fourthhour");
+(fourthhour).textContent = "11:00AM ";
+
+var fifthhour = document.getElementById("fifthhour");
+(fifthhour).textContent = "12:00AM ";
+
+var sixthhour = document.getElementById("sixthhour");
+(sixthhour).textContent = "1:00PM";
+
+var seventhhour = document.getElementById("seventhhour");
+(seventhhour).textContent = "2:00PM";
+
+var eigthhour = document.getElementById("eigthhour");
+(eigthhour).textContent = "3:00PM";
+
+var ninthhour = document.getElementById("ninthhour");
+(ninthhour).textContent = "4:00PM";
+
+var tenthhour = document.getElementById("tenthhour");
+(tenthhour).textContent = "5:00PM";
+
+//if var currentDay is less than or equal to the time specificed in the div, 
+//set attribute to ___
+
+//set current time value to ""
+
+// var currentTime = "";
+// //if number in variable is less than the number in the value, set attribute to ___
+// if(currentTime < 1){
+//     currentHour1.attributes()
+// }
+//else if number in varaible is equal to the number in the value, set attribute to___
+
+//else if number in variable is more than number in value, set attribute to___
 
 //8 am
 $("#saveBtn1").on("click", function(e){
     e.preventDefault();
-    console.log("click");
     console.log($("#myText1").val());
     localStorage.setItem('Task 1:', $("#myText1").val());
 });
 
-var local1 = window.localStorage.getItem('Task 1:');
-console.log(local1);
+local1 = localStorage.getItem('Task 1:');
 text1.append(local1);
 
 //9am
 $("#saveBtn2").on("click", function(e){
     e.preventDefault();
-    console.log("click2");
     console.log($("#myText2").val());
     localStorage.setItem('Task 2:', $("#myText2").val());
 });
 
-var local2 = window.localStorage.getItem('Task 2:');
+local2 = localStorage.getItem('Task 2:');
 console.log(local2);
 text2.append(local2);
+
+//10am
+$("#saveBtn3").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText3").val());
+    localStorage.setItem('Task 3:', $("#myText3").val());
+});
+
+local3 = localStorage.getItem('Task 3:');
+text3.append(local3);
+
+//11am
+$("#saveBtn4").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText4").val());
+    localStorage.setItem('Task 4:', $("#myText4").val());
+});
+
+local4 = window.localStorage.getItem('Task 4:');
+console.log(local4);
+text4.append(local4);
+
+//12pm
+$("#saveBtn5").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText5").val());
+    localStorage.setItem('Task 5:', $("#myText5").val());
+});
+
+local5 = window.localStorage.getItem('Task 5:');
+console.log(local5);
+text5.append(local5);
+
+//1pm
+$("#saveBtn6").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText6").val());
+    localStorage.setItem('Task 6:', $("#myText6").val());
+});
+
+local6 = window.localStorage.getItem('Task 6:');
+console.log(local6);
+text6.append(local6);
+
+//2pm
+$("#saveBtn7").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText7").val());
+    localStorage.setItem('Task 7:', $("#myText7").val());
+});
+
+local7 = window.localStorage.getItem('Task 7:');
+console.log(local7);
+text7.append(local7);
+
+//3pm
+$("#saveBtn8").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText8").val());
+    localStorage.setItem('Task 8:', $("#myText8").val());
+});
+
+local8 = window.localStorage.getItem('Task 8:');
+console.log(local8);
+text8.append(local8);
+
+//4pm
+$("#saveBtn9").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText9").val());
+    localStorage.setItem('Task 9:', $("#myText9").val());
+});
+
+local9 = window.localStorage.getItem('Task 9:');
+console.log(local9);
+text9.append(local9);
+
+//5pm
+$("#saveBtn10").on("click", function(e){
+    e.preventDefault();
+    console.log($("#myText10").val());
+    localStorage.setItem('Task 10:', $("#myText10").val());
+});
+
+local10 = window.localStorage.getItem('Task 10:');
+console.log(local10);
+text10.append(local10);
 
 //if current time block is in the past, assign class of .past 
 //if current time block is present, assign class of .present

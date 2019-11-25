@@ -32,62 +32,72 @@
     <div class="container">
       <!-- Timeblocks go here -->
           <div class = "col-md">
-              <div class = "row" id = "hour1">
-                  <div class = "col-md-1 hour firsthour"></div>
+              <div class = "row" id = "hour1 1">
+                  <div class = "col-md-1 hour time-block" id="firsthour"></div>
                   <textarea id="myText1" class = "col-md-10" type="text"></textarea>
-                  <!-- <input class = "col-md-10 description" id="input1" type="text"> -->
                   <button type = "submit" class = "btn col-md-1 saveBtn" id="saveBtn1">Save</button>
                 </div>
 
               <div class = "row" id = "hour2">
-                  <div class = "col-md-1 hour"></div>
+                  <div class = "col-md-1 hour time-block" id="secondhour"></div>
                   <textarea id="myText2" class = "col-md-10" type="text"></textarea>
-                  <!-- <input class = "col-md-10" id="input2" type="text" required> -->
                   <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn2">Save</button>
               </div>
 
-              <!-- <div class = "row" id = "hour3">
-                    <div class = "col-md-1 hour">10:00</div>
-                    <input class = "col-md-10" id="message" type="text" required>
-                    <button type = "button" class = "col-md-1 btn btn-primary saveBtn"></button>
-              </div>  -->
-              <!-- <div class = "row" id = "hour4">
-                    <div class = "col-md-1"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1 saveBtn"></div>
+              <div class = "row" id = "hour3">
+                  <div class = "col-md-1 hour time-block" id="thirdhour"></div>
+                  <textarea id="myText3" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn3">Save</button>
+              </div> 
+
+              <div class = "row" id = "hour4">
+                  <div class = "col-md-1 hour time-block" id="fourthhour"></div>
+                  <textarea id="myText4" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn4">Save</button>
+              </div>
+              <div class = "row" id = "hour5">
+                  <div class = "col-md-1 hour time-block" id="fifthhour"></div>
+                  <textarea id="myText5" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn5">Save</button>
               </div>
               <div class = "row" id = "hour6">
-                    <div class = "col-md-1"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1"></div>
+                  <div class = "col-md-1 hour time-block" id="sixthhour"></div>
+                  <textarea id="myText6" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn6">Save</button>
               </div>
               <div class = "row" id = "hour7">
-                    <div class = "col-md-1"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1"></div>
+                  <div class = "col-md-1 hour time-block" id="seventhhour"></div>
+                  <textarea id="myText7" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn7">Save</button>
               </div>
               <div class = "row" id = "hour8">
-                    <div class = "col-md-1"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1"></div>
+                  <div class = "col-md-1 hour time-block" id="eigthhour"></div>
+                  <textarea id="myText8" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn8">Save</button>
               </div>
               <div class = "row" id = "hour9">
-                    <div class = "col-md-1"></div>
-                    <div class = "col-md-10"></div>
-                    <div class = "col-md-1"></div>
-              </div> -->
+                  <div class = "col-md-1 hour time-block" id="ninthhour"></div>
+                  <textarea id="myText9" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn9">Save</button>
+              </div>
+              <div class = "row" id = "hour10">
+                  <div class = "col-md-1 hour time-block" id="tenthhour"></div>
+                  <textarea id="myText10" class = "col-md-10" type="text"></textarea>
+                  <button type = "button" class = "btn col-md-1 saveBtn" id="saveBtn10">Save</button>
+              </div>
           </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script id = "date">
+
         var m = moment();
-        console.log(m.format('LL'));
-        $("#currentDay").append(m.format('LL'));
-        // $("#hour1").append(m.format('h'));
+        console.log(m.format('LLL'));
+        $("#currentDay").append(m.format('LLL'));
+
         // var m1 = moment();
-        // $("#firsthour").append(m1.fromNow('h'));
-        // console.log(m1.fromNow('h'));
+        // $("#firsthour").append(m1.format('hh:mm a'));
+        // console.log(m1.fromNow('hh:mm a'));
 
       </script>
     <script src ="./script.js"></script>
