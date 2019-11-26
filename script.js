@@ -1,55 +1,38 @@
 var currentDay = $("#currentDay");
 
-var text1 = document.getElementById("myText1");
-var text2 = document.getElementById("myText2");
-var text3 = document.getElementById("myText3");
-var text4 = document.getElementById("myText4");
-var text5 = document.getElementById("myText5");
-var text6 = document.getElementById("myText6");
-var text7 = document.getElementById("myText7");
-var text8 = document.getElementById("myText8");
-var text9 = document.getElementById("myText9");
-var text10 = document.getElementById("myText10");
+// var hours = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5];
+// for(var i = 0; i < hours.length; i++){
+    
+// };
 
-var local1 = "";
-var local2 = "";
-var local3 = "";
-var local4 = "";
-var local5 = "";
-var local6 = "";
-var local7 = "";
-var local8 = "";
-var local9 = "";
-var local10 = "";
+var firsthour = $("#firsthour").val(m.function("h"));
+// (firsthour).textContent = "8:00AM";
 
-var firsthour = document.getElementById("firsthour");
-(firsthour).textContent = "8:00AM";
-
-var secondhour = document.getElementById("secondhour");
+var secondhour = $("#secondhour");
 (secondhour).textContent = "9:00AM";
 
-var thirdhour = document.getElementById("thirdhour");
+var thirdhour = $("#thirdhour");
 (thirdhour).textContent = "10:00AM ";
 
-var fourthhour = document.getElementById("fourthhour");
+var fourthhour = $("#fourthhour");
 (fourthhour).textContent = "11:00AM ";
 
-var fifthhour = document.getElementById("fifthhour");
+var fifthhour = $("#fifthhour");
 (fifthhour).textContent = "12:00AM ";
 
-var sixthhour = document.getElementById("sixthhour");
+var sixthhour = $("#sixthhour");
 (sixthhour).textContent = "1:00PM";
 
-var seventhhour = document.getElementById("seventhhour");
+var seventhhour = $("#seventhhour");
 (seventhhour).textContent = "2:00PM";
 
-var eigthhour = document.getElementById("eigthhour");
+var eigthhour = $("#eigthhour");
 (eigthhour).textContent = "3:00PM";
 
-var ninthhour = document.getElementById("ninthhour");
+var ninthhour = $("#ninthhour");
 (ninthhour).textContent = "4:00PM";
 
-var tenthhour = document.getElementById("tenthhour");
+var tenthhour = $("#tenthhour");
 (tenthhour).textContent = "5:00PM";
 
 //if var currentDay is less than or equal to the time specificed in the div, 
@@ -74,7 +57,7 @@ $("#saveBtn1").on("click", function(e){
 });
 
 local1 = localStorage.getItem('Task 1:');
-text1.append(local1);
+$("#myText1").val(local1);
 
 //9am
 $("#saveBtn2").on("click", function(e){
@@ -85,7 +68,7 @@ $("#saveBtn2").on("click", function(e){
 
 local2 = localStorage.getItem('Task 2:');
 console.log(local2);
-text2.append(local2);
+$("#myText2").val(local2);
 
 //10am
 $("#saveBtn3").on("click", function(e){
@@ -95,7 +78,7 @@ $("#saveBtn3").on("click", function(e){
 });
 
 local3 = localStorage.getItem('Task 3:');
-text3.append(local3);
+$("#myText3").val(local3);
 
 //11am
 $("#saveBtn4").on("click", function(e){
@@ -106,7 +89,7 @@ $("#saveBtn4").on("click", function(e){
 
 local4 = window.localStorage.getItem('Task 4:');
 console.log(local4);
-text4.append(local4);
+$("#myText4").val(local4);
 
 //12pm
 $("#saveBtn5").on("click", function(e){
@@ -117,7 +100,7 @@ $("#saveBtn5").on("click", function(e){
 
 local5 = window.localStorage.getItem('Task 5:');
 console.log(local5);
-text5.append(local5);
+$("#myText5").val(local5);
 
 //1pm
 $("#saveBtn6").on("click", function(e){
@@ -128,7 +111,7 @@ $("#saveBtn6").on("click", function(e){
 
 local6 = window.localStorage.getItem('Task 6:');
 console.log(local6);
-text6.append(local6);
+$("#myText6").val(local6);
 
 //2pm
 $("#saveBtn7").on("click", function(e){
@@ -139,7 +122,7 @@ $("#saveBtn7").on("click", function(e){
 
 local7 = window.localStorage.getItem('Task 7:');
 console.log(local7);
-text7.append(local7);
+$("#myText7").val(local7);
 
 //3pm
 $("#saveBtn8").on("click", function(e){
@@ -150,7 +133,7 @@ $("#saveBtn8").on("click", function(e){
 
 local8 = window.localStorage.getItem('Task 8:');
 console.log(local8);
-text8.append(local8);
+$("#myText8").val(local8);
 
 //4pm
 $("#saveBtn9").on("click", function(e){
@@ -161,7 +144,7 @@ $("#saveBtn9").on("click", function(e){
 
 local9 = window.localStorage.getItem('Task 9:');
 console.log(local9);
-text9.append(local9);
+$("#myText9").val(local9);
 
 //5pm
 $("#saveBtn10").on("click", function(e){
@@ -172,7 +155,7 @@ $("#saveBtn10").on("click", function(e){
 
 local10 = window.localStorage.getItem('Task 10:');
 console.log(local10);
-text10.append(local10);
+$("#myText10").val(local10);
 
 //if current time block is in the past, assign class of .past 
 //if current time block is present, assign class of .present
