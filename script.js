@@ -7,31 +7,88 @@ var currentDay = $("#currentDay");
 //     $("#firsthour").val(hours[0]);
 // };
 
-var firsthour = $("#firsthour").val("8:00");
-var secondhour = $("#secondhour").val("9:00");
-var thirdhour = $("#thirdhour").val("10:00");
-var fourthhour = $("#fourthhour").val("11:00");
-var fifthhour = $("#fifthhour").val("12:00");
-var sixthhour = $("#sixthhour").val("13:00");
-var seventhhour = $("#seventhhour").val("14:00");
-var eigthhour = $("#eigthhour").val("15:00");
-var ninthhour = $("#ninthhour").val("16:00");
-var tenthhour = $("#tenthhour").val("17:00");
+var firsthour = $("#firsthour");
+var secondhour = $("#secondhour");
+var thirdhour = $("#thirdhour");
+var fourthhour = $("#fourthhour");
+var fifthhour = $("#fifthhour");
+var sixthhour = $("#sixthhour");
+var seventhhour = $("#seventhhour");
+var eigthhour = $("#eigthhour");
+var ninthhour = $("#ninthhour");
+var tenthhour = $("#tenthhour");
 
 //if var currentDay is less than or equal to the time specificed in the div, 
 //set attribute to ___
 
-//set current time value to ""
+var m = moment();
+var currentTime = (m.format('hA'));
+console.log(m.format('hA'));
 
-// var currentTime = "";
-// //if number in variable is less than the number in the value, set attribute to ___
-// if(currentTime < 1){
-//     currentHour1.attributes()
-// }
-//else if number in varaible is equal to the number in the value, set attribute to___
+//for top of scheduler
+$("#currentDay").append(m.format('LLL'));
 
-//else if number in variable is more than number in value, set attribute to___
+//for each time block
+firsthour.append(m.format('8A'));
+secondhour.append(m.format('9A'));
+thirdhour.append(m.format('10A'));
+fourthhour.append(m.format('11A'));
+fifthhour.append(m.format('12A'));
+sixthhour.append(m.format('1P'));
+seventhhour.append(m.format('2P'));
+eigthhour.append(m.format('3P'));
+ninthhour.append(m.format('4P'));
+tenthhour.append(m.format('5P'));
 
+if ((m.format('8A')) < currentTime){
+    $("#block1").addClass("past");
+} else if ((m.format('8A')) === currentTime){
+    $("#block1").addClass("present");
+} else {
+    $("#block1").addClass("future");
+};
+
+if ((m.format('9A')) < currentTime){
+    $("#block2").addClass("past");
+} else if ((m.format('9A')) === currentTime){
+    $("#block2").addClass("present");
+} else {
+    $("#block2").addClass("future");
+};
+
+if ((m.format('10A')) < currentTime){
+    $("#block3").addClass("past");
+} else if ((m.format('10A')) === currentTime){
+    $("#block3").addClass("present");
+} else{
+    $("#block3").addClass("future");
+};
+
+if ((m.format('11A')) < currentTime){
+    $("#block4").addClass("past");
+} else if ((m.format('11A')) === currentTime){
+    $("#block4").addClass("present");
+} else {
+    $("#block4").addClass("future");
+};
+
+if ((m.format('12A')) < currentTime){
+    $("#block5").addClass("past");
+} else if ((m.format('12A')) === currentTime){
+    $("#block5").addClass("present");
+} else {
+    $("#block5").addClass("future");
+};
+
+if ((m.format('1P')) < currentTime){
+    $("#block6").addClass("past");
+} else if ((m.format('1P')) === currentTime){
+    $("#block6").addClass("present");
+} else {
+    $("#block6").addClass("future");
+};
+
+//code for storing user input
 //8 am
 $("#saveBtn1").on("click", function(e){
     e.preventDefault();

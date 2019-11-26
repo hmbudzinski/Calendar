@@ -32,55 +32,55 @@
     <div class="container">
       <!-- Timeblocks go here -->
           <div class = "col-md">
-              <div class = "row time-block">
+              <div class = "row time-block" id = "block1">
                   <div class = "col-sm-1 hour" id="firsthour"></div>
                   <textarea id="myText1" class = "col-sm-10" type="text"></textarea>
                   <button type = "submit" class = "btn col-sm-1 saveBtn" id="saveBtn1"><i class="fas fa-save"></i></button>
                 </div>
 
-              <div class = "row time-block">
+              <div class = "row time-block" id = "block2">
                   <div class = "col-sm-1 hour" id="secondhour"></div>
                   <textarea id="myText2" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn2"><i class="fas fa-save"></i></button>
               </div>
 
-              <div class = "row time-block">
+              <div class = "row time-block" id="block3">
                   <div class = "col-sm-1 hour" id="thirdhour"></div>
                   <textarea id="myText3" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn3"><i class="fas fa-save"></i></button>
               </div> 
 
-              <div class = "row time-block">
+              <div class = "row time-block" id="block4">
                   <div class = "col-sm-1 hour" id="fourthhour"></div>
                   <textarea id="myText4" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn4"><i class="fas fa-save"></i></button>
               </div>
-              <div class = "row time-block">
+              <div class = "row time-block" id="block5">
                   <div class = "col-sm-1 hour" id="fifthhour"></div>
                   <textarea id="myText5" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn5"><i class="fas fa-save"></i></button>
               </div>
-              <div class = "row time-block">
+              <div class = "row time-block" id="block6">
                   <div class = "col-sm-1 hour" id="sixthhour"></div>
                   <textarea id="myText6" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn6"><i class="fas fa-save"></i></button>
               </div>
-              <div class = "row time-block">
+              <div class = "row time-block" id="block7">
                   <div class = "col-sm-1 hour" id="seventhhour"></div>
                   <textarea id="myText7" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn7"><i class="fas fa-save"></i></button>
               </div>
-              <div class = "row time-block">
+              <div class = "row time-block" id="block8">
                   <div class = "col-sm-1 hour" id="eigthhour"></div>
                   <textarea id="myText8" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn8"><i class="fas fa-save"></i></button>
               </div>
-                <div class = "row time-block">
+                <div class = "row time-block" id="block9">
                    <div class = "col-sm-1 hour" id="ninthhour"></div>
                   <textarea id="myText9" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn9"><i class="fas fa-save"></i></button>
               </div>
-              <div class = "row time-block">
+              <div class = "row time-block" id="block10">
                   <div class = "col-sm-1 hour" id="tenthhour"></div>
                   <textarea id="myText10" class = "col-sm-10" type="text"></textarea>
                   <button type = "button" class = "btn col-sm-1 saveBtn" id="saveBtn10"><i class="fas fa-save"></i></button>
@@ -89,17 +89,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script id = "date">
-
-        var m = moment();
-        console.log(m.format('LLL'));
-        $("#currentDay").append(m.format('LLL'));
-
-        // var m1 = moment();
-        // $("#firsthour").append(m1.format('hh:mm a'));
-        // console.log(m1.fromNow('hh:mm a'));
-
-      </script>
     <script src ="./script.js"></script>
   </body>
 </html>
