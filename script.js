@@ -16,7 +16,7 @@ var sixthhour = $("#sixthhour").val("13:00");
 var seventhhour = $("#seventhhour").val("14:00");
 var eigthhour = $("#eigthhour").val("15:00");
 var ninthhour = $("#ninthhour").val("16:00");
-var tenthhour = $("#tenthhour")/val("17:00");
+var tenthhour = $("#tenthhour").val("17:00");
 
 //if var currentDay is less than or equal to the time specificed in the div, 
 //set attribute to ___
