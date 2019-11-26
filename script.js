@@ -1,39 +1,22 @@
 var currentDay = $("#currentDay");
 
-// var hours = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5];
+//hours
+// var hours = ["8", "9", "10", "11", "12", "1", "2", "3", "4", "5"];
+
 // for(var i = 0; i < hours.length; i++){
-    
+//     $("#firsthour").val(hours[0]);
 // };
 
-var firsthour = $("#firsthour").val(m.function("h"));
-// (firsthour).textContent = "8:00AM";
-
-var secondhour = $("#secondhour");
-(secondhour).textContent = "9:00AM";
-
-var thirdhour = $("#thirdhour");
-(thirdhour).textContent = "10:00AM ";
-
-var fourthhour = $("#fourthhour");
-(fourthhour).textContent = "11:00AM ";
-
-var fifthhour = $("#fifthhour");
-(fifthhour).textContent = "12:00AM ";
-
-var sixthhour = $("#sixthhour");
-(sixthhour).textContent = "1:00PM";
-
-var seventhhour = $("#seventhhour");
-(seventhhour).textContent = "2:00PM";
-
-var eigthhour = $("#eigthhour");
-(eigthhour).textContent = "3:00PM";
-
-var ninthhour = $("#ninthhour");
-(ninthhour).textContent = "4:00PM";
-
-var tenthhour = $("#tenthhour");
-(tenthhour).textContent = "5:00PM";
+var firsthour = $("#firsthour").val("8:00");
+var secondhour = $("#secondhour").val("9:00");
+var thirdhour = $("#thirdhour").val("10:00");
+var fourthhour = $("#fourthhour").val("11:00");
+var fifthhour = $("#fifthhour").val("12:00");
+var sixthhour = $("#sixthhour").val("13:00");
+var seventhhour = $("#seventhhour").val("14:00");
+var eigthhour = $("#eigthhour").val("15:00");
+var ninthhour = $("#ninthhour").val("16:00");
+var tenthhour = $("#tenthhour")/val("17:00");
 
 //if var currentDay is less than or equal to the time specificed in the div, 
 //set attribute to ___
