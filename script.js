@@ -1,12 +1,12 @@
+var m = moment();
 var currentDay = $("#currentDay");
+//for top of scheduler
+$("#currentDay").append(m.format('LL'));
 
 //hours
 // var hours = ["8", "9", "10", "11", "12", "1", "2", "3", "4", "5"];
 
-// for(var i = 0; i < hours.length; i++){
-//     $("#firsthour").val(hours[0]);
-// };
-
+//for the column that lists what hour it is 
 var firsthour = $("#firsthour");
 var secondhour = $("#secondhour");
 var thirdhour = $("#thirdhour");
@@ -22,70 +22,120 @@ var tenthhour = $("#tenthhour");
 //set attribute to ___
 
 var m = moment();
-var currentTime = (m.format('hA'));
-console.log(m.format('hA'));
+var currentHour = (m.format('h'));
+localStorage.setItem("Current Hour: ", currentHour);
+var currentTime = localStorage.getItem("Current Hour: ").valueOf;
+// console.log(m.format('hA'));
+//console.log(currentTime);
 
-//for top of scheduler
-$("#currentDay").append(m.format('LLL'));
 
-//for each time block
 firsthour.append(m.format('8A'));
 secondhour.append(m.format('9A'));
 thirdhour.append(m.format('10A'));
 fourthhour.append(m.format('11A'));
-fifthhour.append(m.format('12A'));
-sixthhour.append(m.format('1P'));
-seventhhour.append(m.format('2P'));
-eigthhour.append(m.format('3P'));
-ninthhour.append(m.format('4P'));
-tenthhour.append(m.format('5P'));
+fifthhour.append(m.format('12'));
+sixthhour.append(m.format('13'));
+seventhhour.append(m.format('14'));
+eigthhour.append(m.format('15'));
+ninthhour.append(m.format('16'));
+tenthhour.append(m.format('17'));
 
-if ((m.format('8A')) < currentTime){
-    $("#block1").addClass("past");
-} else if ((m.format('8A')) === currentTime){
-    $("#block1").addClass("present");
+var block1 = $("#1").value = 8;
+var block2 = $("#2").value = 9;
+var block3 = $("#3").value = 10;
+var block4 = $("#4").value = 11;
+var block5 = $("#5").value = 12;
+var block6 = $("#6").value = 13;
+var block7 = $("#7").value = 14;
+var block8 = $("#8").value = 15;
+var block9 = $("#9").value = 16;
+var block10 = $("#10").value = 17;
+
+if (block1 < currentHour){
+    $("#1").addClass("past");
+} else if (block1 == currentTime){
+    $("#1").addClass("present");
 } else {
-    $("#block1").addClass("future");
+    $("#1").addClass("future");
 };
 
-if ((m.format('9A')) < currentTime){
-    $("#block2").addClass("past");
-} else if ((m.format('9A')) === currentTime){
-    $("#block2").addClass("present");
+if (block2 < currentHour){
+    $("#2").addClass("past");
+} else if (block2 == currentHour){
+    $("#2").addClass("present");
 } else {
-    $("#block2").addClass("future");
+    $("#2").addClass("future");
 };
 
-if ((m.format('10A')) < currentTime){
-    $("#block3").addClass("past");
-} else if ((m.format('10A')) === currentTime){
-    $("#block3").addClass("present");
+if (block3 < currentHour){
+    $("#3").addClass("past");
+} else if (block3 == currentHour){
+    $("#3").addClass("present");
 } else{
-    $("#block3").addClass("future");
+    $("#3").addClass("future");
 };
 
-if ((m.format('11A')) < currentTime){
-    $("#block4").addClass("past");
-} else if ((m.format('11A')) === currentTime){
-    $("#block4").addClass("present");
+if (block4 < currentHour){
+    $("#4").addClass("past");
+} else if (block4 == currentHour){
+    $("#4").addClass("present");
 } else {
-    $("#block4").addClass("future");
+    $("#4").addClass("future");
 };
 
-if ((m.format('12A')) < currentTime){
-    $("#block5").addClass("past");
-} else if ((m.format('12A')) === currentTime){
-    $("#block5").addClass("present");
+// //PM not real format
+//12pm
+if (block5 < currentHour){
+    $("#5").addClass("past");
+} else if (block5 === currentHour){
+    $("#5").addClass("present");
 } else {
-    $("#block5").addClass("future");
+    $("#5").addClass("future");
 };
 
-if ((m.format('1P')) < currentTime){
-    $("#block6").addClass("past");
-} else if ((m.format('1P')) === currentTime){
-    $("#block6").addClass("present");
+//1pm
+if (block6 < currentHour){
+    $("#6").addClass("past");
+} else if (block6 === currentHour){
+    $("#6").addClass("present");
 } else {
-    $("#block6").addClass("future");
+    $("#6").addClass("future");
+};
+
+//2pm
+if (block7 < currentHour){
+    $("#7").addClass("past");
+} else if (block6 === currentHour){
+    $("#7").addClass("present");
+} else {
+    $("#7").addClass("future");
+};
+
+//3pm
+if (block8 < currentHour){
+    $("#8").addClass("past");
+} else if (block8 === currentHour){
+    $("#8").addClass("present");
+} else {
+    $("#8").addClass("future");
+};
+
+//4pm
+if (block9 < currentHour){
+    $("#9").addClass("past");
+} else if (block9 === currentHour){
+    $("#9").addClass("present");
+} else {
+    $("#9").addClass("future");
+};
+
+//5pm
+if (block10 < currentTime){
+    $("#10").addClass("past");
+} else if (block10 === currentTime){
+    $("#10").addClass("present");
+} else {
+    $("#10").addClass("future");
 };
 
 //code for storing user input
