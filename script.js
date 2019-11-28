@@ -33,12 +33,12 @@ firsthour.append(m.format('8A'));
 secondhour.append(m.format('9A'));
 thirdhour.append(m.format('10A'));
 fourthhour.append(m.format('11A'));
-fifthhour.append(m.format('12'));
-sixthhour.append(m.format('13'));
-seventhhour.append(m.format('14'));
-eigthhour.append(m.format('15'));
-ninthhour.append(m.format('16'));
-tenthhour.append(m.format('17'));
+fifthhour.append(m.format('12')+"PM");
+sixthhour.append(m.format('1')+"PM");
+seventhhour.append(m.format('2')+"PM");
+eigthhour.append(m.format('3')+"PM");
+ninthhour.append(m.format('4')+"PM");
+tenthhour.append(m.format('5')+"PM");
 
 var block1 = $("#1").value = 8;
 var block2 = $("#2").value = 9;
